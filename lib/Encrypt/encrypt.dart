@@ -6,14 +6,17 @@ class Encrypt{
 
   Map<dynamic, dynamic> encryptMap = {
     "a" : "c",
+    "á" : "0",
     "b" : "d",
     "c" : "e",
     "d" : "f",
     "e" : "g",
+    "é" : "1",
     "f" : "h",
     "g" : "i",
     "h" : "j",
     "i" : "k",
+    "í" : "2",
     "j" : "l",
     "k" : "m",
     "l" : "n",
@@ -21,11 +24,13 @@ class Encrypt{
     "n" : "o",
     "ñ" : "p",
     "o" : "q",
+    "ó" : "3",
     "p" : "r",
     "r" : "t",
     "s" : "u",
     "t" : "v",
     "u" : "w",
+    "ú" : "4",
     "v" : "x",
     "w" : "y",
     "x" : "z",
@@ -36,12 +41,15 @@ class Encrypt{
   String encryptMessage(String message){
     // This method receives a message in string format and will return a message encrypted
     String result = "";
-    message.toLowerCase(); // Switch to lowerCase
 
     for (String letter in message.characters){
-      if (letter!="\n" && encryptMap.keys.contains(letter)){
-        result += encryptMap[letter];
-      } else if (letter == "\n") {
+      String char = "";
+      if (letter != "\n" && letter != "")
+        char  = letter.toLowerCase();
+
+      if (char!="\n" && encryptMap.keys.contains(char)){
+        result += encryptMap[char];
+      } else if (char == "\n") {
         result += "\n";
       } else {
         result += " ";

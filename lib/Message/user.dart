@@ -73,6 +73,7 @@ class UserState extends State<User>{
                         filled:  true,
                         fillColor: Colors.white,
                       ),
+                      maxLines: null,
                     ),
                   ),
                 ],
