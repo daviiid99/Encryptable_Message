@@ -97,12 +97,20 @@ class EncryptableMessageState extends State<EncryptableMessage>{
                       color: Colors.white,
                         child: Row(
                         children: [
-                          const Spacer(),
-                          ListTile(
-                          leading: Icon(menuOptionsIcon[index], color: Colors.yellowAccent,),
-                          title : Text(menuOptionsTitle[index], style: const TextStyle(color: Colors.black),)
-                          ),
-                          const Spacer(),
+                          SizedBox(
+                            width: 400,
+                            height: 70,
+                            child : Column(
+                              children: [
+                                ListTile(
+                                    leading: Icon(menuOptionsIcon[index], color: Colors.yellowAccent,),
+                                    title : Text(menuOptionsTitle[index], style: const TextStyle(color: Colors.black),)
+                                ),
+                              ],
+
+                            )
+
+                          )
                         ],
                       ),
                     )
