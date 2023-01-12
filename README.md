@@ -9,6 +9,7 @@ An android application written in dart that helps to share encrypted messages.
 # Platform Tested Compatibility
 
 - [x] android
+- [x] iOS
 
 # Dependencies
 All plugins used on this project
